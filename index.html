@@ -76,7 +76,20 @@
       color: var(--sky);
       border: 1px solid #334155;
     }
-    .pay a { color: var(--sky); font-weight: 600; text-decoration: none; }
+    .pay .cta-row { margin-top: 4px; }
+    a.btn.pay-btn {
+      background: transparent;
+      color: var(--sky);
+      border: 1px solid #475569;
+      padding: 10px 18px;
+    }
+    a.btn.pay-btn:hover { border-color: var(--sky); }
+    .pay-handles {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      letter-spacing: 0.01em;
+    }
     .fine { color: var(--muted); font-size: 0.9rem; margin: 10px 0 0; }
     .shot {
       width: 100%;
@@ -154,11 +167,12 @@
 
     <section class="card pay">
       <h2>Easy pay</h2>
-      <ul>
-        <li><a href="https://venmo.com/u/bamtec70" rel="noopener">Venmo @bamtec70</a></li>
-        <li><a href="https://paypal.me/bamtx" rel="noopener">PayPal paypal.me/bamtx</a></li>
-        <li><a href="https://cash.app/$bamtec" rel="noopener">Cash App $bamtec</a></li>
-      </ul>
+      <div class="cta-row">
+        <a class="btn pay-btn" href="https://venmo.com/u/bamtec70" rel="noopener" target="_blank">Venmo</a>
+        <a class="btn pay-btn" href="https://paypal.me/bamtx" rel="noopener" target="_blank">PayPal</a>
+        <a class="btn pay-btn" href="https://cash.app/$bamtec" rel="noopener" target="_blank">Cash App</a>
+      </div>
+      <p class="pay-handles">@bamtec70 · bamtx · $bamtec</p>
       <p class="fine">Cash on site is fine. Quotes by text after you send address + a yard photo.</p>
     </section>
 
