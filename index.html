@@ -38,7 +38,7 @@
     "logo": "https://wedolawnsdfw.com/img/gear-van.jpg",
     "description": "Reliable residential lawn mowing, edging, trimming and blow-off in Fort Worth, North Fort Worth, Alliance, Haslet, Keller, Saginaw and Heritage.",
     "telephone": "+12147273258",
-    "priceRange": "$$",
+    "priceRange": "$39+",
     "areaServed": [
       { "@type": "City", "name": "Fort Worth" },
       { "@type": "Place", "name": "North Fort Worth", "containedInPlace": { "@type": "City", "name": "Fort Worth" } },
@@ -105,6 +105,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Yes. Text your address and a yard photo for a quick, free quote."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does mowing cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most yards start at $39 per cut. Text a photo and your address for an exact quote."
       }
     },
     {
@@ -247,14 +255,6 @@
       color: var(--head);
     }
     .wordmark svg { color: var(--accent); }
-    .wordmark .dfw {
-      font-size: 0.72rem;
-      letter-spacing: 0.14em;
-      padding: 2px 7px;
-      border-radius: 6px;
-      background: var(--accent);
-      color: #052e16;
-    }
     .lead { color: var(--muted); margin: 0 auto 20px; font-size: 1.05rem; max-width: 34rem; }
     .shot {
       display: block;
@@ -270,6 +270,34 @@
     }
     @media (min-width: 641px) { .shot { aspect-ratio: 16 / 10; object-position: 50% 60%; } }
     .shot-caption { margin: 10px 0 0; color: var(--muted); font-size: 0.85rem; }
+    .price {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 6px;
+      width: fit-content;
+      margin: 18px auto 0;
+      padding: 7px 16px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.35);
+      color: var(--text);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    .price strong {
+      font-family: var(--display);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--accent-2);
+      letter-spacing: -0.01em;
+    }
+    .price + .cta-row { margin-top: 12px; }
+    .social-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 18px; }
+    .ready-card .social-label { flex: 1 1 100%; max-width: none; margin: 0; color: var(--muted); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+    a.btn.ghost.sm { font-size: 0.9rem; padding: 8px 16px; font-weight: 600; }
+    footer a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+    footer a:hover { color: var(--sky); }
     .cta-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 18px; }
     a.btn {
       display: inline-flex;
@@ -494,11 +522,12 @@
       <div class="hero-top">
       <p class="badge">Alliance · North Fort Worth · 76177</p>
       <h1>Reliable Lawn Mowing in <span class="hl">Fort Worth, Haslet &amp; Alliance</span></h1>
-      <p class="brand-sub wordmark"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c0-6 2-10 4-13M9 20c0-5 1-8 3-11M14 20c0-4 1-7 3-9M19 20c0-3 .5-5 1.5-6"/></svg><span>We Do Lawns</span> <span class="dfw">DFW</span></p>
+      <p class="brand-sub wordmark"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c0-6 2-10 4-13M9 20c0-5 1-8 3-11M14 20c0-4 1-7 3-9M19 20c0-3 .5-5 1.5-6"/></svg><span>We Do Lawns DFW</span></p>
       <p class="lead">Residential mowing for Alliance and north Fort Worth households. Reliable local service — clear schedule, clean edges, straightforward communication.</p>
       </div>
       <img class="shot" src="img/gear-van.jpg" width="1400" height="2486" alt="Lawn equipment staged beside the work van: Husqvarna mower, edger, trimmer, blower, and fuel cans" fetchpriority="high" />
       <p class="shot-caption">Ready for the block — mower, edger, trimmer, blower.</p>
+      <p class="price">Mowing from <strong>$39</strong> per cut</p>
       <div class="cta-row">
         <a class="btn lg" href="sms:+12147273258?body=Hi%20Blake%20%E2%80%94%20I%20need%20a%20lawn%20quote%20in%20"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4V6a1 1 0 0 1 1-1z"/></svg>Text a yard photo for a quote</a>
         <a class="btn secondary lg" href="tel:+12147273258">Call</a>
@@ -564,6 +593,10 @@
           <p>Yes. Text your address and a yard photo for a quick, free quote.</p>
         </details>
         <details>
+          <summary><h3>How much does mowing cost?</h3><svg class="chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <p>Most yards start at $39 per cut. Text a photo and your address for an exact quote.</p>
+        </details>
+        <details>
           <summary><h3>Do you edge and trim?</h3><svg class="chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
           <p>Yes. Edging, trimming and blow-off come with every mow.</p>
         </details>
@@ -584,16 +617,21 @@
 
     <section class="card ready-card">
       <h2>Ready?</h2>
-      <p>Text your street + ZIP and whether you want a one-time cut or a recurring schedule. A yard photo helps with the quote.</p>
+      <p>Text your street + ZIP and whether you want a one-time cut or a recurring schedule. A yard photo helps with the quote. Most yards start at $39 per cut.</p>
       <div class="cta-row">
         <a class="btn lg" href="sms:+12147273258?body=Hi%20Blake%20%E2%80%94%20lawn%20quote%20for%20">Text a yard photo for a quote</a>
         <a class="btn ghost" href="https://g.page/r/CdfGw1E2AcgDEBI/review" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg>Leave us a Google review</a>
+      </div>
+      <div class="social-row">
+        <p class="social-label">Follow us</p>
+        <a class="btn ghost sm" href="https://www.facebook.com/profile.php?id=61594590213853" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1z"/></svg>Facebook</a>
+        <a class="btn ghost sm" href="https://nextdoor.com/page/we-do-lawns-dfw-fort-worth-tx/" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5L12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-5h4v5"/></svg>Nextdoor</a>
       </div>
     </section>
 
     <footer>
       We Do Lawns DFW · wedolawnsdfw.com · Fort Worth, Alliance &amp; Haslet<br />
-      Spoken business name: We Do Lawn Service
+      <a href="https://www.facebook.com/profile.php?id=61594590213853" rel="noopener" target="_blank">Facebook</a> · <a href="https://nextdoor.com/page/we-do-lawns-dfw-fort-worth-tx/" rel="noopener" target="_blank">Nextdoor</a>
     </footer>
   </main>
 
