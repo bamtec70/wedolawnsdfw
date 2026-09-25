@@ -235,12 +235,12 @@
     }
     .meet {
       display: grid;
-      grid-template-columns: 120px 1fr;
+      grid-template-columns: 1fr;
+      justify-items: center;
       gap: 14px;
-      align-items: center;
-    }
-    @media (max-width: 520px) {
-      .meet { grid-template-columns: 1fr; }
+      text-align: center;
+      max-width: 34rem;
+      margin: 0 auto;
     }
     .meet img {
       width: 120px;
@@ -265,6 +265,40 @@
       margin-left: auto;
       margin-right: auto;
     }
+    .card h2 { text-align: center; }
+    .card .fine {
+      text-align: center;
+      max-width: 36rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .pay { text-align: center; }
+    .pay .cta-row { justify-content: center; }
+    .services ul {
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .areas ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+    .areas li {
+      margin: 0;
+      border: 1px solid #334155;
+      border-radius: 999px;
+      padding: 6px 12px;
+      color: #e2e8f0;
+      background: rgba(15, 23, 42, 0.5);
+      font-size: 0.95rem;
+    }
+    .faq .faq-list { max-width: 36rem; margin: 0 auto; text-align: left; }
     .ready-card {
       text-align: center;
     }
@@ -282,10 +316,8 @@
       font-weight: 700;
       color: #f8fafc;
     }
-    .faq h3:first-of-type { margin-top: 0; }
+    .faq h3:first-child { margin-top: 0; }
     .faq p { margin: 0; color: var(--muted); }
-    .areas ul { columns: 2; column-gap: 24px; }
-    @media (max-width: 380px) { .areas ul { columns: 1; } }
     footer {
       margin-top: 22px;
       color: var(--muted);
@@ -311,7 +343,7 @@
       <p class="fine">Serving Alliance, Heritage, Keller edge, and nearby north Fort Worth neighborhoods. Not sure if we cover your street? Text and ask.</p>
     </section>
 
-    <section class="card">
+    <section class="card services">
       <h2>Lawn mowing &amp; yard care</h2>
       <ul>
         <li>Mow + edge</li>
@@ -359,6 +391,7 @@
 
     <section class="card faq">
       <h2>FAQ</h2>
+      <div class="faq-list">
       <h3>Do you offer free estimates?</h3>
       <p>Yes. Text your address and a yard photo for a quick, free quote.</p>
       <h3>Do you edge and trim?</h3>
@@ -369,6 +402,7 @@
       <p>Yes. Weekly or biweekly service, plus one-time cuts.</p>
       <h3>How do I pay?</h3>
       <p>Cash on site, Venmo, PayPal or Cash App.</p>
+      </div>
     </section>
 
     <section class="card ready-card">
