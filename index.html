@@ -23,6 +23,9 @@
   <meta name="twitter:title" content="Reliable Lawn Mowing in Fort Worth, Haslet &amp; Alliance | We Do Lawns DFW" />
   <meta name="twitter:description" content="Reliable mowing, edging &amp; trimming in Fort Worth, North Fort Worth, Alliance, Haslet, Keller &amp; Saginaw. Text a yard photo for a free quote." />
   <meta name="twitter:image" content="https://wedolawnsdfw.com/img/gear-van.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -141,214 +144,364 @@
   </script>
   <style>
     :root {
-      --bg: #0f172a;
-      --card: #1e293b;
-      --line: #334155;
+      --bg: #0b1324;
+      --card: #16223a;
+      --line: #2b3a52;
       --text: #e2e8f0;
-      --muted: #94a3b8;
+      --muted: #a3b1c6;
+      --head: #f8fafc;
       --accent: #22c55e;
+      --accent-2: #4ade80;
       --sky: #38bdf8;
+      --display: "Plus Jakarta Sans", Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
     * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
     body {
       margin: 0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      background: linear-gradient(160deg, #0f172a 0%, #14532d 45%, #0f172a 100%);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: var(--text);
-      line-height: 1.55;
+      line-height: 1.6;
+      min-height: 100vh;
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(ellipse 70% 45% at 50% 0%, rgba(34, 197, 94, 0.22), transparent 70%),
+        repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.022) 0 28px, rgba(255, 255, 255, 0) 28px 56px),
+        linear-gradient(160deg, #0b1324 0%, #10361f 45%, #0b1324 100%);
+      background-attachment: scroll, fixed, fixed;
     }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 28px 18px 48px; }
+    .wrap { max-width: 800px; margin: 0 auto; padding: 28px 16px 40px; }
+    .hero, .card {
+      position: relative;
+      background: linear-gradient(180deg, rgba(30, 41, 59, 0.96) 0%, rgba(17, 26, 44, 0.96) 100%);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 26px 22px;
+      margin: 0 0 18px;
+      box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.55), 0 1px 0 rgba(255, 255, 255, 0.04) inset;
+      overflow: hidden;
+      text-align: center;
+    }
+    .hero::before, .card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--sky));
+    }
+    h2 {
+      margin: 0 0 14px;
+      font-family: var(--display);
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: var(--head);
+      text-align: center;
+    }
+    .fine {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 14px auto 0;
+      max-width: 36rem;
+      text-align: center;
+    }
+    /* Hero */
     .badge {
       display: inline-block;
       font-size: 0.72rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       font-weight: 700;
-      color: var(--accent);
-      margin: 0 0 8px;
-    }
-    h1 {
-      margin: 0 0 8px;
-      font-size: clamp(1.8rem, 5vw, 2.4rem);
-      font-weight: 800;
-      line-height: 1.15;
-    }
-    .lead { color: var(--muted); margin: 0 0 18px; font-size: 1.05rem; }
-    .hero, .card {
-      background: rgba(30, 41, 59, 0.94);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 20px 18px;
+      color: var(--accent-2);
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.35);
+      border-radius: 999px;
+      padding: 5px 12px;
       margin: 0 0 14px;
     }
-    h2 {
-      margin: 0 0 10px;
-      font-size: 1.05rem;
+    h1 {
+      margin: 0 auto 10px;
+      max-width: 36rem;
+      font-family: var(--display);
+      font-size: clamp(2rem, 6.4vw, 2.9rem);
       font-weight: 800;
-      color: #f8fafc;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+      color: var(--head);
+      text-wrap: balance;
     }
-    ul { margin: 0; padding-left: 1.15em; }
-    li { margin: 0 0 6px; }
-    .cta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    h1 .hl {
+      background: linear-gradient(90deg, var(--accent-2), #86efac);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .wordmark {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 2px 0 14px;
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+      color: var(--head);
+    }
+    .wordmark svg { color: var(--accent); }
+    .wordmark .dfw {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      padding: 2px 7px;
+      border-radius: 6px;
+      background: var(--accent);
+      color: #052e16;
+    }
+    .lead { color: var(--muted); margin: 0 auto 20px; font-size: 1.05rem; max-width: 34rem; }
+    .shot {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: 50% 62%;
+      border-radius: 16px;
+      border: 1px solid rgba(74, 222, 128, 0.25);
+      box-shadow: 0 12px 34px -14px rgba(34, 197, 94, 0.45);
+      margin: 0;
+    }
+    @media (min-width: 641px) { .shot { aspect-ratio: 16 / 10; object-position: 50% 60%; } }
+    .shot-caption { margin: 10px 0 0; color: var(--muted); font-size: 0.85rem; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 18px; }
     a.btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
       text-decoration: none;
       font-weight: 700;
       border-radius: 999px;
-      padding: 11px 16px;
+      padding: 12px 20px;
       color: #052e16;
-      background: var(--accent);
+      background: linear-gradient(180deg, #34d36e, var(--accent));
+      box-shadow: 0 8px 20px -8px rgba(34, 197, 94, 0.7);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
     }
-    a.btn.secondary { background: #0ea5e9; color: #082f49; }
-    a.btn.ghost {
-      background: transparent;
-      color: var(--sky);
-      border: 1px solid #334155;
-    }
-    .pay .cta-row { margin-top: 4px; }
-    a.btn.pay-btn {
-      background: transparent;
-      color: var(--sky);
-      border: 1px solid #475569;
-      padding: 10px 18px;
-    }
-    a.btn.pay-btn:hover { border-color: var(--sky); }
-    .pay-handles {
-      margin: 10px 0 0;
-      color: var(--muted);
-      font-size: 0.82rem;
-      letter-spacing: 0.01em;
-    }
-    .fine { color: var(--muted); font-size: 0.9rem; margin: 10px 0 0; }
-    .shot {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      display: block;
-      border: 1px solid var(--line);
-      margin: 0 0 10px;
-    }
-    .shot-caption {
-      margin: 0 0 4px;
-      color: var(--muted);
-      font-size: 0.85rem;
-    }
-    .meet {
-      display: grid;
-      grid-template-columns: 1fr;
-      justify-items: center;
-      gap: 14px;
-      text-align: center;
-      max-width: 34rem;
-      margin: 0 auto;
-    }
-    .meet img {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 999px;
-      border: 2px solid var(--accent);
-    }
-    .hero {
-      text-align: center;
-    }
-    .hero .cta-row {
+    a.btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px -8px rgba(34, 197, 94, 0.8); }
+    a.btn.lg { font-size: 1.05rem; padding: 14px 24px; }
+    a.btn.secondary { background: rgba(56, 189, 248, 0.12); color: var(--sky); border: 1px solid rgba(56, 189, 248, 0.45); box-shadow: none; }
+    a.btn.secondary:hover { border-color: var(--sky); }
+    a.btn.ghost { background: rgba(15, 23, 42, 0.5); color: var(--sky); border: 1px solid #3b4d66; box-shadow: none; }
+    a.btn.ghost:hover { border-color: var(--sky); }
+    a.btn:focus-visible, summary:focus-visible { outline: 2px solid var(--sky); outline-offset: 3px; }
+    .hero .fine { margin-top: 16px; }
+    .trust {
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 0;
+      display: flex;
+      flex-wrap: wrap;
       justify-content: center;
+      gap: 8px;
     }
-    .hero .fine {
-      max-width: 36rem;
-      margin-left: auto;
-      margin-right: auto;
+    .trust li {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 13px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.55);
+      border: 1px solid var(--line);
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--text);
     }
-    .hero .lead {
-      max-width: 34rem;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .card h2 { text-align: center; }
-    .card .fine {
-      text-align: center;
-      max-width: 36rem;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .pay { text-align: center; }
-    .pay .cta-row { justify-content: center; }
-    .services ul {
-      display: block;
-      width: fit-content;
-      margin: 0 auto;
-      text-align: left;
-    }
-    .areas ul {
+    .trust svg { width: 17px; height: 17px; color: var(--accent-2); flex: none; }
+    /* Services */
+    .tiles {
       list-style: none;
       padding: 0;
       margin: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .tiles li {
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px 12px 16px;
+      font-weight: 600;
+      color: var(--head);
+      font-size: 0.95rem;
+      line-height: 1.35;
+    }
+    .tile-icon {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      margin: 0 auto 10px;
+      border-radius: 12px;
+      color: var(--accent-2);
+      background: rgba(34, 197, 94, 0.12);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+    }
+    @media (max-width: 560px) {
+      .tiles { grid-template-columns: 1fr; }
+      .tiles li { display: flex; align-items: center; gap: 14px; text-align: left; padding: 12px 14px; }
+      .tile-icon { margin: 0; width: 42px; height: 42px; flex: none; }
+    }
+    /* Areas */
+    .areas ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 28rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 8px;
     }
     .areas li {
-      margin: 0;
-      border: 1px solid #334155;
+      border: 1px solid rgba(34, 197, 94, 0.35);
       border-radius: 999px;
-      padding: 6px 12px;
-      color: #e2e8f0;
-      background: rgba(15, 23, 42, 0.5);
+      padding: 7px 15px;
+      color: var(--text);
+      background: rgba(15, 23, 42, 0.55);
       font-size: 0.95rem;
+      font-weight: 500;
+      transition: border-color 0.15s ease, background-color 0.15s ease;
     }
-    .faq .faq-list { max-width: 36rem; margin: 0 auto; text-align: left; }
-    .ready-card {
-      text-align: center;
+    .areas li:hover { border-color: var(--accent-2); background: rgba(34, 197, 94, 0.12); }
+    /* Meet Blake */
+    .meet { max-width: 34rem; margin: 0 auto; }
+    .meet img {
+      display: block;
+      width: 128px;
+      height: 128px;
+      margin: 4px auto 10px;
+      object-fit: cover;
+      border-radius: 999px;
+      border: 3px solid var(--accent);
+      box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.15), 0 10px 30px -6px rgba(34, 197, 94, 0.55);
     }
-    .ready-card .cta-row {
-      justify-content: center;
-    }
-    .ready-card p {
-      max-width: 34rem;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .faq h3 {
-      margin: 12px 0 4px;
-      font-size: 0.98rem;
+    .role {
+      display: inline-block;
+      margin: 0 0 12px;
+      font-size: 0.78rem;
       font-weight: 700;
-      color: #f8fafc;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-2);
     }
-    .faq h3:first-child { margin-top: 0; }
-    .faq p { margin: 0; color: var(--muted); }
+    .meet p { margin: 0 0 10px; color: var(--muted); }
+    .meet p strong { color: var(--head); }
+    /* Pay */
+    .pay .cta-row { margin-top: 2px; }
+    a.btn.pay-btn {
+      background: rgba(15, 23, 42, 0.55);
+      color: var(--sky);
+      border: 1px solid #3b4d66;
+      box-shadow: none;
+      padding: 10px 22px;
+    }
+    a.btn.pay-btn:hover { border-color: var(--sky); background: rgba(56, 189, 248, 0.1); }
+    .pay-handles { margin: 12px 0 0; color: var(--muted); font-size: 0.84rem; }
+    /* FAQ */
+    .faq-list { max-width: 36rem; margin: 0 auto; text-align: left; }
+    .faq details {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.45);
+      margin: 0 0 10px;
+      transition: border-color 0.15s ease;
+    }
+    .faq details[open] { border-color: rgba(34, 197, 94, 0.45); }
+    .faq summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      cursor: pointer;
+      list-style: none;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq h3 { margin: 0; font-size: 0.98rem; font-weight: 700; color: var(--head); }
+    .faq .chev { color: var(--accent-2); flex: none; transition: transform 0.2s ease; }
+    .faq details[open] .chev { transform: rotate(180deg); }
+    .faq details p { margin: 0; padding: 0 16px 14px; color: var(--muted); }
+    /* Ready */
+    .ready-card {
+      background:
+        radial-gradient(ellipse 80% 90% at 50% 0%, rgba(34, 197, 94, 0.28), transparent 70%),
+        linear-gradient(180deg, rgba(20, 60, 38, 0.96), rgba(17, 26, 44, 0.96));
+      border-color: rgba(34, 197, 94, 0.4);
+      padding: 32px 22px;
+    }
+    .ready-card h2 { font-size: 1.6rem; }
+    .ready-card p { max-width: 34rem; margin: 0 auto; color: #c3cedd; }
     footer {
-      margin-top: 22px;
+      margin-top: 26px;
       color: var(--muted);
       font-size: 0.85rem;
       text-align: center;
     }
-
+    /* Sticky mobile CTA */
+    .sticky-cta { display: none; }
+    @media (max-width: 640px) {
+      body { padding-bottom: 88px; }
+      .wrap { padding-top: 18px; }
+      .hero, .card { padding: 24px 16px; }
+      .sticky-cta {
+        display: block;
+        position: fixed;
+        left: 0; right: 0; bottom: 0;
+        z-index: 50;
+        padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+        background: rgba(11, 19, 36, 0.92);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid var(--line);
+        transition: transform 0.25s ease;
+      }
+      .hero .cta-row a.btn { flex: 1 1 100%; }
+      .sticky-cta.is-hidden { transform: translateY(110%); }
+      .sticky-cta a.btn { display: flex; width: 100%; font-size: 1.02rem; padding: 14px 18px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+      a.btn:hover { transform: none; }
+    }
   </style>
 </head>
 <body>
   <main class="wrap">
     <section class="hero">
       <p class="badge">Alliance · North Fort Worth · 76177</p>
-      <h1>Reliable Lawn Mowing in Fort Worth, Haslet &amp; Alliance</h1>
-      <p class="brand-sub" style="margin:0 0 10px;font-weight:800;font-size:1.15rem;color:#f8fafc;">We Do Lawns DFW</p>
+      <h1>Reliable Lawn Mowing in <span class="hl">Fort Worth, Haslet &amp; Alliance</span></h1>
+      <p class="brand-sub wordmark"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c0-6 2-10 4-13M9 20c0-5 1-8 3-11M14 20c0-4 1-7 3-9M19 20c0-3 .5-5 1.5-6"/></svg><span>We Do Lawns</span> <span class="dfw">DFW</span></p>
       <p class="lead">Residential mowing for Alliance and north Fort Worth households. Reliable local service — clear schedule, clean edges, straightforward communication.</p>
+      <img class="shot" src="img/gear-van.jpg" width="1400" height="2486" alt="Lawn equipment staged beside the work van: Husqvarna mower, edger, trimmer, blower, and fuel cans" fetchpriority="high" />
       <p class="shot-caption">Ready for the block — mower, edger, trimmer, blower.</p>
-      <img class="shot" src="img/gear-van.jpg" width="1400" height="1050" alt="Lawn equipment staged beside the work van: Husqvarna mower, edger, trimmer, blower, and fuel cans" />
       <div class="cta-row">
-        <a class="btn" href="sms:+12147273258?body=Hi%20Blake%20%E2%80%94%20I%20need%20a%20lawn%20quote%20in%20">Text a yard photo for a quote</a>
-        <a class="btn secondary" href="tel:+12147273258">Call</a>
+        <a class="btn lg" href="sms:+12147273258?body=Hi%20Blake%20%E2%80%94%20I%20need%20a%20lawn%20quote%20in%20"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4V6a1 1 0 0 1 1-1z"/></svg>Text a yard photo for a quote</a>
+        <a class="btn secondary lg" href="tel:+12147273258">Call</a>
       </div>
+      <ul class="trust" aria-label="Why neighbors choose us">
+        <li><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mowing since 1979</li>
+        <li><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11h7M8.5 14h4"/></svg>Text-first quotes</li>
+        <li><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Local to 76177</li>
+      </ul>
       <p class="fine">Serving Alliance, Heritage, Keller edge, and nearby north Fort Worth neighborhoods. Not sure if we cover your street? Text and ask.</p>
     </section>
 
     <section class="card services">
       <h2>Lawn mowing &amp; yard care</h2>
-      <ul>
-        <li>Mow + edge</li>
-        <li>Blow-off / basic cleanup</li>
-        <li>One-time cuts or recurring weekly / biweekly</li>
+      <ul class="tiles">
+        <li><span class="tile-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 15h13l2-5h3"/><path d="M5 15V11h8l2 4"/><circle cx="7" cy="18" r="2"/><circle cx="15" cy="18" r="2"/><path d="M2 21c2-1 3-1 5 0s3 1 5 0 3-1 5 0 3 1 5 0"/></svg></span><span>Mow + edge</span></li>
+        <li><span class="tile-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h16a3 3 0 1 1-3 3"/><path d="M3 16h7"/></svg></span><span>Blow-off &amp; cleanup</span></li>
+        <li><span class="tile-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M8.5 14.5l2.2 2.2 4.8-4.8"/></svg></span><span>One-time or weekly / biweekly cuts</span></li>
       </ul>
       <p class="fine">Simple residential yards. Not a landscaping redesign shop — reliable cuts for people who don’t have time.</p>
     </section>
@@ -370,11 +523,10 @@
     <section class="card">
       <h2>Meet Blake</h2>
       <div class="meet">
-        <img src="img/blake-crew.jpg" width="120" height="120" alt="Blake with lawn gear — local We Do Lawns DFW" />
-        <div>
-          <p style="margin:0 0 8px;color:var(--muted);">Blake runs We Do Lawns DFW for Alliance and north Fort Worth homes. On busier weeks, a trusted helper may join so yards stay on schedule.</p>
-          <p class="fine" style="margin:0;">For a first quote, please <strong style="color:#e2e8f0;">text</strong> your address and a quick yard photo. — Calls are welcome after we’ve started a text thread.</p>
-        </div>
+        <img src="img/blake-crew.jpg" width="128" height="128" alt="Blake with lawn gear — local We Do Lawns DFW" loading="lazy" />
+        <p class="role">Owner · Mowing since 1979</p>
+        <p>Blake runs We Do Lawns DFW for Alliance and north Fort Worth homes. On busier weeks, a trusted helper may join so yards stay on schedule.</p>
+        <p class="fine" style="margin-top:4px;">For a first quote, please <strong>text</strong> your address and a quick yard photo. — Calls are welcome after we’ve started a text thread.</p>
       </div>
     </section>
 
@@ -392,25 +544,35 @@
     <section class="card faq">
       <h2>FAQ</h2>
       <div class="faq-list">
-      <h3>Do you offer free estimates?</h3>
-      <p>Yes. Text your address and a yard photo for a quick, free quote.</p>
-      <h3>Do you edge and trim?</h3>
-      <p>Yes. Edging, trimming and blow-off come with every mow.</p>
-      <h3>What areas do you serve?</h3>
-      <p>Fort Worth, North Fort Worth, Alliance, Haslet, Keller, Saginaw, Heritage and nearby neighborhoods. Text your address to check.</p>
-      <h3>Do you offer recurring service?</h3>
-      <p>Yes. Weekly or biweekly service, plus one-time cuts.</p>
-      <h3>How do I pay?</h3>
-      <p>Cash on site, Venmo, PayPal or Cash App.</p>
+        <details>
+          <summary><h3>Do you offer free estimates?</h3><svg class="chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <p>Yes. Text your address and a yard photo for a quick, free quote.</p>
+        </details>
+        <details>
+          <summary><h3>Do you edge and trim?</h3><svg class="chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <p>Yes. Edging, trimming and blow-off come with every mow.</p>
+        </details>
+        <details>
+          <summary><h3>What areas do you serve?</h3><svg class="chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <p>Fort Worth, North Fort Worth, Alliance, Haslet, Keller, Saginaw, Heritage and nearby neighborhoods. Text your address to check.</p>
+        </details>
+        <details>
+          <summary><h3>Do you offer recurring service?</h3><svg class="chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <p>Yes. Weekly or biweekly service, plus one-time cuts.</p>
+        </details>
+        <details>
+          <summary><h3>How do I pay?</h3><svg class="chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <p>Cash on site, Venmo, PayPal or Cash App.</p>
+        </details>
       </div>
     </section>
 
     <section class="card ready-card">
       <h2>Ready?</h2>
-      <p style="margin:0 0 12px;color:var(--muted);">Text your street + ZIP and whether you want a one-time cut or a recurring schedule. A yard photo helps with the quote.</p>
+      <p>Text your street + ZIP and whether you want a one-time cut or a recurring schedule. A yard photo helps with the quote.</p>
       <div class="cta-row">
-        <a class="btn" href="sms:+12147273258?body=Hi%20Blake%20%E2%80%94%20lawn%20quote%20for%20">Text a yard photo for a quote</a>
-        <a class="btn ghost" href="https://www.google.com/maps?cid=272469110267561687" rel="noopener" target="_blank">See us on Google / leave a review</a>
+        <a class="btn lg" href="sms:+12147273258?body=Hi%20Blake%20%E2%80%94%20lawn%20quote%20for%20">Text a yard photo for a quote</a>
+        <a class="btn ghost" href="https://www.google.com/maps?cid=272469110267561687" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg>See us on Google / leave a review</a>
       </div>
     </section>
 
@@ -419,5 +581,22 @@
       Spoken business name: We Do Lawn Service
     </footer>
   </main>
+
+  <div class="sticky-cta">
+    <a class="btn" href="sms:+12147273258?body=Hi%20Blake%20%E2%80%94%20I%20need%20a%20lawn%20quote%20in%20">Text a yard photo for a quote</a>
+  </div>
+  <script>
+    (function () {
+      var bar = document.querySelector('.sticky-cta');
+      var ctas = document.querySelectorAll('.hero .cta-row, .ready-card .cta-row');
+      if (!bar || !ctas.length || !('IntersectionObserver' in window)) return;
+      var visible = new Set();
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { e.isIntersecting ? visible.add(e.target) : visible.delete(e.target); });
+        bar.classList.toggle('is-hidden', visible.size > 0);
+      });
+      ctas.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 </body>
 </html>
